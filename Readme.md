@@ -15,7 +15,7 @@ This is a docker setup to start a minecraft bedrock server inside a docker conta
 - **`git`**: Used to download this repository.
 - **`curl`**: Used to download the linux bedrock server.
 - **`unzip`**: Used to unpack the download.
-- **`docker`**: Used to build and run the server inside a docker container.
+- **`docker-compose`**: Used to build and run the server inside a docker container.
 - **`python`**: Used to check if server is online.
 
 ## Quickstart
@@ -29,7 +29,7 @@ cd minecraft-server
 
 # Download server, unzip it and remove the zip.
 curl -o bedrock-server.zip https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.10.01.zip && \      # Download using curl.
-    unzip bedrock-server.zip -d /mc-server && \     # Unzip to mc-server.
+    unzip bedrock-server.zip -d ./mc-server && \     # Unzip to mc-server.
     rm bedrock-server.zip                           # Delete the zip file.
 ```
 
@@ -41,7 +41,7 @@ curl -o bedrock-server.zip https://minecraft.azureedge.net/bin-linux/bedrock-ser
 
 ```bash
 # Runs a docker container and automatically starts the server
-docker compose up --build
+docker-compose up --build -d
 ```
 
 ## Check server
