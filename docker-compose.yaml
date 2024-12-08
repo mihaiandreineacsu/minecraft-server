@@ -1,0 +1,13 @@
+services:
+  mc-server:
+    build: .
+    ports:
+      - 8888:19132/tcp
+      - 8888:19132/udp
+    environment:
+      - SERVER_PORT:19132
+    volumes:
+      - mc-server-volume:/mc-server
+
+volumes:
+  mc-server-volume:
