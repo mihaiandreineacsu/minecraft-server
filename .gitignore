@@ -1,2 +1,4 @@
 mc-server/
 *env/
+.env
+.vscode/
